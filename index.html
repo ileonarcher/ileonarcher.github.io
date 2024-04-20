@@ -1,39 +1,557 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>Моя тестовая страница</title>
-    <link href="styles/styles.css" rel="stylesheet" type="text/css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HI-NEWS.RU</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
   </head>
   <body>
-    <h1>Мой главный заголовок</h1>
-    <h2>Мой заголовок верхнего уровня</h2>
-    <h3>Мой подзаголовок</h3>
-    <h4>Мой под-подзаголовок</h4>
-    <p>Это одиночный абзац</p>
-    <img src="images/website-drawing-scan.png" alt="Mozilla firefox logo doodle">
-    <p>Вот так выглядит основной текст. Наверное, в CSS можно будет менять его внешний вид.</p>
-    <p>Да! В CSS действительно можно поменять его отображение!!!</p>
-    <p>Вот так можно создать ненумерованный список</p>
-    <ul>
-      <li>Элемент</li>
-      <li>Элемент</li>
-      <li>Элемент</li>
-    </ul>
-    <p>А вот так нумеровнный</p>
-    <ol>
-      <li>Первый элемент</li>
-      <li>Второй элемент</li>
-      <li>Третий элемент</li>
-    </ol>
-    <a href="https://www.mozilla.org/ru/about/manifesto/details/">Манифест Mozilla</a>
-    <br>
-    <br>
-    <button>Change user</button>
-    <script src="scripts/main.js"></script>
+    <div class="header">
+      <div class="header__container">
+        <div class="header__logo logo">
+          <div class="logo__text">HI-NEWS.RU</div>
+        </div>
+        <div class="header__menu menu">
+          <nav class="menu__items">
+            <div class="menu__item">
+              <a href="#" class="menu__link">МАРСОХОД</a>
+            </div>
+            <div class="menu__item">
+              <a href="#" class="menu__link">TESLA</a>
+            </div>
+            <div class="menu__item">
+              <a href="#" class="menu__link">ПЛАНЕТА МАРС</a>
+            </div>
+            <div class="menu__item">
+              <a href="#" class="menu__link">NASA</a>
+            </div>
+            <div class="menu__item">
+              <a href="#" class="menu__link">ИЛОН МАСК</a>
+            </div>
+            <div class="menu__item">
+              <a href="#" class="menu__link">РОБОТОТЕХНИКА</a>
+            </div>
+          </nav>
+        </div>
+        <div class="header__search search">
+          <div class="search__block">
+            <input type="search" name="search" class="search__field" />
+            <button class="search__icon">
+              <img src="img/search.svg" alt="Лупа" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="first-block">
+      <div class="first-block__container aligin-1-2-4">
+        <div class="align-1-2-4__blockpost-1">
+          <div class="bp__body bp-body">
+            <div class="bp-body__tag">Исследования</div>
+            <div class="bp-body__title bp-body__title_big">
+              Можно ли разгадать тайну <br />расширения Вселенной?
+            </div>
+            <div class="bp-body__stat bp-stat">
+              <div class="bp-stat__author">Рамис Ганиев</div>
+              <div class="bp-stat__comments bp-stat-comments">
+                <img
+                  src="img/comment-icon.svg"
+                  alt="comment icon"
+                  class="bp-stat-comments__logo"
+                />
+                <div class="bp-stat-comments__number">2</div>
+              </div>
+              <div class="bp-stat__date">22.03.2021</div>
+            </div>
+          </div>
+          <img
+            src="img/first-block/bp1-img.jpg"
+            alt="star sky"
+            class="bp-image"
+          />
+        </div>
+        <div class="align-1-2-4__blockpost-2">
+          <img
+            src="img/first-block/bp2-img.jpg"
+            alt="star sky"
+            class="bp-image"
+          />
+          <div class="bp__body bp-body">
+            <div class="bp-body__tag">Это интересно</div>
+            <div class="bp-body__title">
+              Ученые создали искусственные слезные железы.
+            </div>
+            <div class="bp-body__stat bp-stat">
+              <div class="bp-stat__author">Рамис Ганиев</div>
+              <div class="bp-stat__comments bp-stat-comments">
+                <img
+                  src="img/comment-icon.svg"
+                  alt="comment icon"
+                  class="bp-stat-comments__logo"
+                />
+                <div class="bp-stat-comments__number">0</div>
+              </div>
+              <div class="bp-stat__date">23.03.2021</div>
+            </div>
+          </div>
+        </div>
+        <div class="align-1-2-4__blockpost-3">
+          <img
+            src="img/first-block/bp3-img.jpg"
+            alt="star sky"
+            class="bp-image"
+          />
+          <div class="bp__body bp-body">
+            <div class="bp-body__tag">наука</div>
+            <div class="bp-body__title">
+              Как эффект Доплера помогает изучать Вселенную?
+            </div>
+            <div class="bp-body__stat bp-stat">
+              <div class="bp-stat__author">Любовь Соколова</div>
+              <div class="bp-stat__comments bp-stat-comments">
+                <img
+                  src="img/comment-icon.svg"
+                  alt="comment icon"
+                  class="bp-stat-comments__logo"
+                />
+                <div class="bp-stat-comments__number">18</div>
+              </div>
+              <div class="bp-stat__date">23.03.2021</div>
+            </div>
+          </div>
+        </div>
+        <div class="align-1-2-4__blockpost-4">
+          <div class="bp__body bp-body">
+            <div class="bp-body__tag">это интересно</div>
+            <div class="bp-body__title">
+              Почему люди не падают, когда спотыкаются?
+            </div>
+            <div class="bp-body__stat bp-stat">
+              <div class="bp-stat__author">Рамис Ганиев</div>
+              <div class="bp-stat__comments bp-stat-comments">
+                <img
+                  src="img/comment-icon.svg"
+                  alt="comment icon"
+                  class="bp-stat-comments__logo"
+                />
+                <div class="bp-stat-comments__number">2</div>
+              </div>
+              <div class="bp-stat__date">23.03.2021</div>
+            </div>
+          </div>
+        </div>
+        <div class="align-1-2-4__blockpost-5">
+          <div class="bp__body bp-body">
+            <div class="bp-body__tag">Исследования</div>
+            <div class="bp-body__title">
+              В космической паутине миллиарды карликовых галактик
+            </div>
+            <div class="bp-body__stat bp-stat">
+              <div class="bp-stat__author">Любовь Соколова</div>
+              <div class="bp-stat__comments bp-stat-comments">
+                <img
+                  src="img/comment-icon.svg"
+                  alt="comment icon"
+                  class="bp-stat-comments__logo"
+                />
+                <div class="bp-stat-comments__number">26</div>
+              </div>
+              <div class="bp-stat__date">23.03.2021</div>
+            </div>
+          </div>
+        </div>
+        <div class="align-1-2-4__blockpost-6">
+          <div class="bp__body bp-body">
+            <div class="bp-body__tag">это интересно</div>
+            <div class="bp-body__title">
+              Насколько сильно телевидение влияет на жизнь детей?
+            </div>
+            <div class="bp-body__stat bp-stat">
+              <div class="bp-stat__author">Рамис Ганиев</div>
+              <div class="bp-stat__comments bp-stat-comments">
+                <img
+                  src="img/comment-icon.svg"
+                  alt="comment icon"
+                  class="bp-stat-comments__logo"
+                />
+                <div class="bp-stat-comments__number">17</div>
+              </div>
+              <div class="bp-stat__date">23.03.2021</div>
+            </div>
+          </div>
+        </div>
+        <div class="align-1-2-4__blockpost-7">
+          <div class="bp__body bp-body">
+            <div class="bp-body__tag">звук и акустика</div>
+            <div class="bp-body__title">
+              Флагманские наушники. <br />
+              Обзор Fiio FD5
+            </div>
+            <div class="bp-body__stat bp-stat">
+              <div class="bp-stat__author">Артем Сутягин</div>
+              <div class="bp-stat__comments bp-stat-comments">
+                <img
+                  src="img/comment-icon.svg"
+                  alt="comment icon"
+                  class="bp-stat-comments__logo"
+                />
+                <div class="bp-stat-comments__number">1</div>
+              </div>
+              <div class="bp-stat__date">22.03.2021</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="second-block">
+      <div class="second-block__container">
+        <div class="sec-block-bp8">
+          <img
+            class="sec-block-bp8__img"
+            src="img/first-block/bp4-img.jpg"
+            alt=""
+          />
+          <div class="sec-block-bp8__body bp-body bp-body_stretch">
+            <div class="bp-body__tag">Это интересно</div>
+            <div class="bp-body__title bp-body__title_med">
+              Куда исчезла вода на Марсе?<br />Марсоходы могут ответить на этот
+              вопрос
+            </div>
+            <div class="bp-body__subtitle">
+              Ученые уверены, что когда-то давно на планете Марс существовала
+              вода.
+            </div>
+            <div class="bp-body__stat bp-stat">
+              <div class="bp-stat__author">Артем Сутягин</div>
+              <div class="bp-stat__comments bp-stat-comments">
+                <img
+                  src="img/comment-icon.svg"
+                  alt="comment icon"
+                  class="bp-stat-comments__logo"
+                />
+                <div class="bp-stat-comments__number">1</div>
+              </div>
+              <div class="bp-stat__date">22.03.2021</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="third-block">
+      <div class="third-block__container">
+        <div class="third-block__bp1">
+          <div class="bp1__body bp-body">
+            <div class="bp-body__tag">Это интересно</div>
+            <div class="bp-body__title">
+              Ученые нашли хитрость, помогает снять усталость
+            </div>
+            <div class="bp-body__stat bp-stat">
+              <div class="bp-stat__author">Рамис Ганиев</div>
+              <div class="bp-stat__comments bp-stat-comments">
+                <img
+                  src="img/comment-icon.svg"
+                  alt="comment icon"
+                  class="bp-stat-comments__logo"
+                />
+                <div class="bp-stat-comments__number">2</div>
+              </div>
+              <div class="bp-stat__date">23.03.2021</div>
+            </div>
+          </div>
+        </div>
+        <div class="third-block__bp2">
+          <div class="bp2__body bp-body">
+            <div class="bp-body__tag">Это интересно</div>
+            <div class="bp-body__title">
+              Автомобили Tesla теперь можно купить за биткоины.
+            </div>
+            <div class="bp-body__stat bp-stat">
+              <div class="bp-stat__author">Рамис Ганиев</div>
+              <div class="bp-stat__comments bp-stat-comments">
+                <img
+                  src="img/comment-icon.svg"
+                  alt="comment icon"
+                  class="bp-stat-comments__logo"
+                />
+                <div class="bp-stat-comments__number">2</div>
+              </div>
+              <div class="bp-stat__date">23.03.2021</div>
+            </div>
+          </div>
+        </div>
+        <div class="third-block__bp3">
+          <div class="bp3__body bp-body">
+            <div class="bp-body__tag">НАУКА</div>
+            <div class="bp-body__title">
+              Смогут ли люди ПРОХОДИТЬ сквозь червоточины?
+            </div>
+            <div class="bp-body__stat bp-stat">
+              <div class="bp-stat__author">Рамис Ганиев</div>
+              <div class="bp-stat__comments bp-stat-comments">
+                <img
+                  src="img/comment-icon.svg"
+                  alt="comment icon"
+                  class="bp-stat-comments__logo"
+                />
+                <div class="bp-stat-comments__number">2</div>
+              </div>
+              <div class="bp-stat__date">23.03.2021</div>
+            </div>
+          </div>
+        </div>
+        <div class="third-block__bp4">
+          <div class="bp3__body bp-body">
+            <div class="bp-body__tag">Это интересно</div>
+            <div class="bp-body__title">
+              Россия тоже запускает космические спутники
+            </div>
+            <div class="bp-body__stat bp-stat">
+              <div class="bp-stat__author">Рамис Ганиев</div>
+              <div class="bp-stat__comments bp-stat-comments">
+                <img
+                  src="img/comment-icon.svg"
+                  alt="comment icon"
+                  class="bp-stat-comments__logo"
+                />
+                <div class="bp-stat-comments__number">2</div>
+              </div>
+              <div class="bp-stat__date">23.03.2021</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fourth-block">
+      <div class="fourth-block__container">
+        <div class="fourth-block__bp1">
+          <div class="bp__body bp-body">
+            <div class="bp-body__tag">ЭТО ИНТЕРЕСНО</div>
+            <div class="bp-body__title bp-body__title_big">
+              Вертолет Ingenuity скоро совершит полет на Марсе
+            </div>
+            <div class="bp-body__stat bp-stat">
+              <div class="bp-stat__author">Рамис Ганиев</div>
+              <div class="bp-stat__comments bp-stat-comments">
+                <img
+                  src="img/comment-icon.svg"
+                  alt="comment icon"
+                  class="bp-stat-comments__logo"
+                />
+                <div class="bp-stat-comments__number">3</div>
+              </div>
+              <div class="bp-stat__date">25.03.2021</div>
+            </div>
+          </div>
+          <img
+            src="img/first-block/s4bp1.png"
+            alt="star sky"
+            class="bp-image"
+          />
+        </div>
+        <div class="fourth-block__bp2">
+          <div class="bp__body bp-body">
+            <div class="bp-body__tag">Исследования</div>
+            <div class="bp-body__title bp-body__title_big">
+              Почему стало рождаться больше близнецов?
+            </div>
+            <div class="bp-body__stat bp-stat">
+              <div class="bp-stat__author">Рамис Ганиев</div>
+              <div class="bp-stat__comments bp-stat-comments">
+                <img
+                  src="img/comment-icon.svg"
+                  alt="comment icon"
+                  class="bp-stat-comments__logo"
+                />
+                <div class="bp-stat-comments__number">2</div>
+              </div>
+              <div class="bp-stat__date">22.03.2021</div>
+            </div>
+          </div>
+          <img
+            src="img/first-block/s4bp2.png"
+            alt="star sky"
+            class="bp-image"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="fifth-block">
+      <div class="fifth-block__container">
+        <div class="fif-block-bp1">
+          <img
+            class="fif-block-bp1__img"
+            src="img/first-block/s5bp1.png"
+            alt=""
+          />
+          <div class="fif-block-bp1__body bp-body bp-body_stretch">
+            <div class="bp-body__tag">Это интересно</div>
+            <div class="bp-body__title bp-body__title_med">
+              Что происходит с тропическими лесами Амазонии?
+            </div>
+            <div class="bp-body__subtitle">
+              Леса, особенно когда их много, являются чудесными машинами для
+              сокращения выбросов углерода в земную атмосферу.
+            </div>
+            <div class="bp-body__stat bp-stat">
+              <div class="bp-stat__author">Артем Сутягин</div>
+              <div class="bp-stat__comments bp-stat-comments">
+                <img
+                  src="img/comment-icon.svg"
+                  alt="comment icon"
+                  class="bp-stat-comments__logo"
+                />
+                <div class="bp-stat-comments__number">1</div>
+              </div>
+              <div class="bp-stat__date">22.03.2021</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sixs-block">
+      <div class="sixs-block__container">
+        <div class="sixs-block__bp1">
+          <img
+            src="img/first-block/s6bp1.png"
+            alt="star sky"
+            class="bp-image"
+          />
+          <div class="bp1__body bp-body">
+            <div class="bp-body__tag">Это интересно</div>
+            <div class="bp-body__title">
+              Найдена самая странная на вид акула
+            </div>
+            <div class="bp-body__stat bp-stat">
+              <div class="bp-stat__author">Любовь Соколова</div>
+              <div class="bp-stat__comments bp-stat-comments">
+                <img
+                  src="img/comment-icon.svg"
+                  alt="comment icon"
+                  class="bp-stat-comments__logo"
+                />
+                <div class="bp-stat-comments__number">18</div>
+              </div>
+              <div class="bp-stat__date">23.03.2021</div>
+            </div>
+          </div>
+        </div>
+        <div class="sixs-block__bp2">
+          <img
+            src="img/first-block/s6bp2.png"
+            alt="star sky"
+            class="bp-image"
+          />
+          <div class="bp2__body bp-body">
+            <div class="bp-body__tag">ИССЛЕДОВАНИЯ</div>
+            <div class="bp-body__title">
+              Как распространяется дезинформация?
+            </div>
+            <div class="bp-body__stat bp-stat">
+              <div class="bp-stat__author">Любовь Соколова</div>
+              <div class="bp-stat__comments bp-stat-comments">
+                <img
+                  src="img/comment-icon.svg"
+                  alt="comment icon"
+                  class="bp-stat-comments__logo"
+                />
+                <div class="bp-stat-comments__number">18</div>
+              </div>
+              <div class="bp-stat__date">23.03.2021</div>
+            </div>
+          </div>
+        </div>
+        <div class="sixs-block__bp3">
+          <img
+            src="img/first-block/s6bp3.png"
+            alt="star sky"
+            class="bp-image"
+          />
+          <div class="bp3__body bp-body">
+            <div class="bp-body__tag">ЭТО ИНТЕРЕСНО</div>
+            <div class="bp-body__title">
+              На МКС найдены неизвестные науке микробы
+            </div>
+            <div class="bp-body__stat bp-stat">
+              <div class="bp-stat__author">Любовь Соколова</div>
+              <div class="bp-stat__comments bp-stat-comments">
+                <img
+                  src="img/comment-icon.svg"
+                  alt="comment icon"
+                  class="bp-stat-comments__logo"
+                />
+                <div class="bp-stat-comments__number">18</div>
+              </div>
+              <div class="bp-stat__date">23.03.2021</div>
+            </div>
+          </div>
+        </div>
+        <div class="sixs-block__bp4">
+          <img
+            src="img/first-block/s6bp4.png"
+            alt="star sky"
+            class="bp-image"
+          />
+          <div class="bp3__body bp-body">
+            <div class="bp-body__tag">ТЕХНОЛОГИИ</div>
+            <div class="bp-body__title">
+              Марсоход Perseverance записал звуки скрежета
+            </div>
+            <div class="bp-body__stat bp-stat">
+              <div class="bp-stat__author">Любовь Соколова</div>
+              <div class="bp-stat__comments bp-stat-comments">
+                <img
+                  src="img/comment-icon.svg"
+                  alt="comment icon"
+                  class="bp-stat-comments__logo"
+                />
+                <div class="bp-stat-comments__number">18</div>
+              </div>
+              <div class="bp-stat__date">23.03.2021</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__row-1 row-1">
+          <div class="row-1__links">
+            <a class="row-1__link" href="#">ЗДОРОВЬЕ ЧЕЛОВЕКА</a>
+            <a class="row-1__link" href="#">БУДУЩИЕ ТЕХНОЛОГИИ</a>
+            <a class="row-1__link" href="#">МЕДИЦИНА</a>
+            <a class="row-1__link" href="#">ИСКУССТВЕННЫЙ ИНТЕЛЛЕКТ</a>
+            <a class="row-1__link" href="#">РОССИЙСКИЕ ТЕХНОЛОГИИ</a>
+          </div>
+        </div>
+        <div class="footer__row-2 row-2">
+          <div class="row-2__links">
+            <a class="row-2__link" href="#">Политика конфиденциальности</a>
+            <a class="row-2__link" href="#">Редакционная политика</a>
+            <a class="row-2__link" href="#">Пользовательское соглашение</a>
+          </div>
+        </div>
+        <div class="footer__row-3 row-3">
+          <div class="row-3__links">
+            <a class="row-3__link" href="#">Темы</a>
+            <a class="row-3__link" href="#">Авторы</a>
+            <a class="row-3__link" href="#">О проекте</a>
+            <a class="row-3__link" href="#">Контакты</a>
+            <a class="row-3__link" href="#">Реклама</a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
-</html> 
+</html>

@@ -1,0 +1,12 @@
+@use '../helpers' as *;
+
+.header {
+    &__body {
+        padding-block: rem(20);
+
+        &-inner {
+        display: flex;
+        justify-content: center;
+        }
+    }
+}

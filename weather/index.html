@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width , initial-scale=1.0 , maximum-scale=1.0 , minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Daily Weather</title>
+    <link rel="stylesheet" href="style/main.css" />
+    <script src="scripts/main.js" type="module" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__body">
+        <div class="header__body-inner container">
+          <a href="/" class="header__logo logo" aria-label="Home" title="Home"
+            >Daily Weather
+          </a>
+        </div>
+      </div>
+    </header>
+    <div class="current-weather">
+      <div class="current-weather__body">
+        <div class="current-weather__body-inner container">
+          <img
+            src="images/WeatherIcons/WeatherIcon-10.png"
+            height="100px"
+            class="current-weather__image"
+            js-data-weather-image
+          />
+          <p class="current-weather__temperature">
+            <span
+              class="current-weather__temperature-value"
+              js-data-current-temp
+            >
+              --</span
+            >°
+          </p>
+          <p class="current-weather__weather-condition" js-data-conditions-text>
+            --
+          </p>
+          <p class="current-weather__date" js-data-current-date>
+            23 May, Friday
+          </p>
+          <div class="current-weather__details">
+            <div class="weather-details">
+              <div class="weather-details__parametr">
+                <img
+                  class="weather-details__parametr-img"
+                  src="/images/WeatherIcons/WeatherIcon-04.png"
+                  width="40px"
+                />
+                <p class="weather-details__parametr-value">
+                  <span js-data-current-wind>--</span> km/h
+                </p>
+                <p class="weather-details__parametr-name">Wind</p>
+              </div>
+              <div class="weather-details__parametr">
+                <img
+                  class="weather-details__parametr-img"
+                  src="/images/WeatherIcons/WeatherIcon-05.png"
+                  width="30px"
+                />
+                <p class="weather-details__parametr-value">
+                  <span js-data-current-humidity>--</span>%
+                </p>
+                <p class="weather-details__parametr-name">Humidity</p>
+              </div>
+              <div class="weather-details__parametr">
+                <img
+                  class="weather-details__parametr-img"
+                  src="/images/WeatherIcons/WeatherIcon-01.png"
+                  width="50px"
+                />
+                <p class="weather-details__parametr-value">
+                  <span js-data-current-pressure>--</span> mmHg
+                </p>
+                <p class="weather-details__parametr-name">Pressure</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="weather-forecast">
+      <div class="weather-forecast__body">
+        <div class="weather-forecast__body-inner container">
+          <div class="forecast-title">
+            <p class="forecast-title__today">Today</p>
+            <a href="/" class="forecast-title__week-button"
+              >Next 7-Day Forecast</a
+            >
+          </div>
+          <div class="forecast-slider">
+            <div class="forecast-slider__item forecast-slider__item-selected">
+              <img
+                class="forecast-slider__item-img"
+                alt=""
+                src="/images/WeatherIcons/WeatherIcon-06.png"
+                width="40px"
+              />
+              <div class="forecast-slider__item-info-wrapper">
+                <p class="forecast-slider__item-temperature">--°</p>
+                <p class="forecast-slider__item-time">--:--</p>
+              </div>
+            </div>
+            <div class="forecast-slider__item">
+              <img
+                class="forecast-slider__item-img"
+                alt=""
+                src="/images/WeatherIcons/WeatherIcon-06.png"
+                width="40"
+              />
+              <div class="forecast-slider__item-info-wrapper">
+                <p class="forecast-slider__item-temperature">--°</p>
+                <p class="forecast-slider__item-time">--:--</p>
+              </div>
+            </div>
+            <div class="forecast-slider__item">
+              <img
+                class="forecast-slider__item-img"
+                alt=""
+                src="/images/WeatherIcons/WeatherIcon-06.png"
+                width="40"
+              />
+              <div class="forecast-slider__item-info-wrapper">
+                <p class="forecast-slider__item-temperature">--°</p>
+                <p class="forecast-slider__item-time">--:--</p>
+              </div>
+            </div>
+            <div class="forecast-slider__item">
+              <img
+                class="forecast-slider__item-img"
+                alt=""
+                src="/images/WeatherIcons/WeatherIcon-06.png"
+                width="40"
+              />
+              <div class="forecast-slider__item-info-wrapper">
+                <p class="forecast-slider__item-temperature">--°</p>
+                <p class="forecast-slider__item-time">--:--</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

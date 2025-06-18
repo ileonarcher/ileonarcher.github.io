@@ -1,0 +1,410 @@
+@charset "UTF-8";
+/**
+  Нормализация блочной модели
+ */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/**
+  Убираем внутренние отступы слева тегам списков,
+  у которых есть атрибут class
+ */
+:where(ul, ol):where([class]) {
+  padding-left: 0;
+}
+
+/**
+  Убираем внешние отступы body и двум другим тегам,
+  у которых есть атрибут class
+ */
+body,
+:where(blockquote, figure):where([class]) {
+  margin: 0;
+}
+
+/**
+  Убираем внешние отступы вертикали нужным тегам,
+  у которых есть атрибут class
+ */
+:where(h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl):where([class]) {
+  margin-block: 0;
+}
+
+:where(dd[class]) {
+  margin-left: 0;
+}
+
+:where(fieldset[class]) {
+  margin-left: 0;
+  padding: 0;
+  border: none;
+}
+
+/**
+  Убираем стандартный маркер маркированному списку,
+  у которого есть атрибут class
+ */
+:where(ul[class]) {
+  list-style: none;
+}
+
+:where(address[class]) {
+  font-style: normal;
+}
+
+/**
+  Обнуляем вертикальные внешние отступы параграфа,
+  объявляем локальную переменную для внешнего отступа вниз,
+  чтобы избежать взаимодействие с более сложным селектором
+ */
+p {
+  --paragraphMarginBottom: 24px;
+  margin-block: 0;
+}
+
+/**
+  Внешний отступ вниз для параграфа без атрибута class,
+  который расположен не последним среди своих соседних элементов
+ */
+p:where(:not([class]):not(:last-child)) {
+  margin-bottom: var(--paragraphMarginBottom);
+}
+
+/**
+  Упрощаем работу с изображениями и видео
+ */
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/**
+  Наследуем свойства шрифт для полей ввода
+ */
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+html {
+  /**
+    Пригодится в большинстве ситуаций
+    (когда, например, нужно будет "прижать" футер к низу сайта)
+   */
+  height: 100%;
+  /**
+    Убираем скачок интерфейса по горизонтали
+    при появлении / исчезновении скроллбара
+   */
+  scrollbar-gutter: stable;
+}
+
+/**
+  Плавный скролл
+ */
+html,
+:has(:target) {
+  scroll-behavior: smooth;
+}
+
+body {
+  /**
+    Пригодится в большинстве ситуаций
+    (когда, например, нужно будет "прижать" футер к низу сайта)
+   */
+  min-height: 100%;
+  /**
+    Унифицированный интерлиньяж
+   */
+  line-height: 1.5;
+}
+
+/**
+  Нормализация высоты элемента ссылки при его инспектировании в DevTools
+ */
+a:where([class]) {
+  display: inline-flex;
+}
+
+/**
+  Курсор-рука при наведении на элемент
+ */
+button,
+label {
+  cursor: pointer;
+}
+
+/**
+  Приводим к единому цвету svg-элементы
+ */
+[fill] {
+  fill: currentColor;
+}
+
+[stroke] {
+  stroke: currentColor;
+}
+
+/**
+  Чиним баг задержки смены цвета при взаимодействии с svg-элементами
+ */
+svg * {
+  transition-property: fill, stroke;
+}
+
+/**
+  Удаляем все анимации и переходы для людей,
+  которые предпочитают их не использовать
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+@font-face {
+  font-family: "Rajdhani";
+  src: url("../fonts/Rajdhani-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Rajdhani";
+  src: url("../fonts/Rajdhani-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Rajdhani";
+  src: url("../fonts/Rajdhani-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --light-text: #E6E9FF;
+  --dark-text: #B2A4FF;
+  --color-dark: #192163;
+  --color-light: #363E71;
+  --color-select: #5FACFF;
+  --font-family-base: "Rajdhani", sans-serif;
+  --container-width: 24.5625rem;
+  --container-padding-x: 1rem;
+  --transition-duration: 0.2s;
+}
+
+.container {
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+  background-color: var(--color-dark);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
+@media (width <= 47.99875rem) {
+  .hidden-mobile {
+    display: none !important;
+  }
+}
+
+@media (width > 47.99875rem) {
+  .visible-mobile {
+    display: none !important;
+  }
+}
+
+body {
+  font-family: var(--font-family-base);
+  color: var(--light-text);
+  background-color: var(--color-dark);
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  font-weight: 500;
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  color: inherit;
+}
+@media (any-hover: hover) {
+  a:hover {
+    color: var(--color-select);
+  }
+}
+@media (any-hover: none) {
+  a:active {
+    color: var(--color-select);
+  }
+}
+a[class] {
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 0.125rem dashed var(--color-light);
+  outline-offset: 0.25rem;
+  transition-duration: 0s !important;
+}
+
+.logo {
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.4375rem;
+}
+
+.header__body {
+  padding-block: 1.25rem;
+}
+.header__body-inner {
+  display: flex;
+  justify-content: center;
+}
+
+.current-weather__body {
+  padding-block: 2rem;
+}
+.current-weather__body-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.current-weather__image {
+  max-height: 6.25rem;
+  max-width: 100%;
+}
+.current-weather__temperature {
+  font-weight: 700;
+  font-size: 4.625rem;
+  padding-block-start: 0.75rem;
+  line-height: 5.625rem;
+}
+.current-weather__weather-condition {
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+.current-weather__date {
+  color: var(--dark-text);
+  line-height: 1.1875rem;
+}
+.current-weather__details {
+  padding-block-start: 1.25rem;
+  width: 100%;
+}
+
+.weather-details {
+  background-color: var(--color-light);
+  border-radius: 2.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+.weather-details__parametr {
+  padding-block: 0.625rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 0.1875rem;
+}
+.weather-details__parametr-value {
+  font-weight: 700;
+  line-height: 1.1875rem;
+}
+.weather-details__parametr-name {
+  line-height: 0.75rem;
+  color: var(--dark-text);
+}
+
+.forecast-title {
+  display: flex;
+  justify-content: space-between;
+}
+.forecast-title__today {
+  font-weight: 700;
+  line-height: 1.1875rem;
+}
+.forecast-title__week-button {
+  line-height: 0.75rem;
+  color: var(--dark-text);
+}
+
+.forecast-slider {
+  padding-block: 0.625rem;
+  width: 100%;
+  min-height: 69px;
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  gap: 0.9375rem;
+}
+.forecast-slider::-webkit-scrollbar {
+  display: none;
+}
+.forecast-slider__item {
+  flex-shrink: 0;
+  background-color: var(--color-light);
+  border-radius: 1.625rem;
+  padding: 0.9375rem 1.5625rem;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+.forecast-slider__item-selected {
+  background: linear-gradient(151deg, #5facff 0%, #3f6fa2 100%);
+}
+.forecast-slider__item-temperature {
+  font-weight: 700;
+  line-height: 1.1875rem;
+}
+.forecast-slider__item-time {
+  line-height: 0.75rem;
+  color: var(--dark-text);
+}
+
+/*# sourceMappingURL=main.css.map */

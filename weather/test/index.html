@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Магазин техники</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Блок header -->
+  <header class="header">
+    <div class="header__container container">
+      <a href="/" class="header__logo">TechStore</a>
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li class="header__menu-item">
+            <a href="#" class="header__link header__link--active">Главная</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#" class="header__link">Каталог</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Блок hero -->
+  <section class="hero">
+    <div class="hero__container container">
+      <h1 class="hero__title">Лучшие гаджеты 2024</h1>
+      <p class="hero__text">Новейшие технологии по доступным ценам</p>
+      <button class="hero__button button button--primary">В каталог</button>
+    </div>
+  </section>
+
+  <!-- Блок products -->
+  <section class="products">
+    <div class="products__container container">
+      <h2 class="products__title">Популярные товары</h2>
+      <div class="products__grid">
+        <!-- Карточка товара -->
+        <article class="product-card">
+          <img src="phone.jpg" alt="Смартфон" class="product-card__image">
+          <h3 class="product-card__title">Смартфон X10</h3>
+          <p class="product-card__description">Мощный процессор, 128 ГБ памяти</p>
+          <div class="product-card__footer">
+            <span class="product-card__price">25 990 ₽</span>
+            <button class="product-card__button button button--small">Купить</button>
+          </div>
+        </article>
+
+        <!-- Ещё карточки... -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Блок footer -->
+  <footer class="footer">
+    <div class="footer__container container">
+      <div class="footer__copyright">© 2024 TechStore</div>
+      <ul class="footer__social">
+        <li class="footer__social-item">
+          <a href="#" class="footer__link">VK</a>
+        </li>
+        <li class="footer__social-item">
+          <a href="#" class="footer__link">Telegram</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

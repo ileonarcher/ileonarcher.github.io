@@ -1,0 +1,28 @@
+@use '../helpers' as *;
+
+.weather-details {
+    background-color: var(--color-light);
+    border-radius: rem(40);
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+
+    &__parametr {
+        padding-block: rem(10);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: rem(3);
+
+        &-value {
+            font-weight: 700;
+            line-height: rem(19);
+        }
+
+        &-name {
+            line-height: rem(12);
+            color: var(--dark-text);
+        }
+    }
+
+}

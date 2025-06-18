@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="heading"></div>
+      <div class="content-container">
+        <div class="current-weather">
+          <div class="current-weather__icon">
+            <p>ICON</p>
+          </div>
+          <div class="current-weather__main-info main-info">
+            <div class="main-info__temperature">
+              <p>20&deg;C</p>
+            </div>
+            <div class="main-info__conditions">
+              <p>Thunderstorm</p>
+            </div>
+            <div class="main-info__date">
+              <p>Monday, 28 Aug</p>
+            </div>
+          </div>
+          <div class="current-weather__details weather-details">
+            <div class="weather-details__frame">
+              <div class="weather-details__wind">
+                <div class="weather-details__icon"></div>
+                <div class="weather-details__value">30%</div>
+                <div class="weather-details__name">Wind</div>
+              </div>
+              <div class="weather-details__humidity">
+                <div class="weather-details__icon"></div>
+                <div class="weather-details__value">30%</div>
+                <div class="weather-details__name">Humidity</div>
+              </div>
+              <div class="weather-details__rain">
+                <div class="weather-details__icon"></div>
+                <div class="weather-details__value">90%</div>
+                <div class="weather-details__name">Rain</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="weather-schedule">
+          <div class="weather-schedule__heading"></div>
+          <div class="weather-schedule__selector selector">
+            <div
+              class="selector__schedule-item schedule-item schedule-item--active"
+            >
+              <div class="schedule-item__icon"></div>
+              <div class="schedule-item__info">
+                <div class="schedule-item__temperature"></div>
+                <div class="schedule-item__time"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-bar-container">
+        <nav class="nav-bar">
+          <div class="nav-bar__home nav-bar__home--active">home</div>
+          <div class="nav-bar__search">search</div>
+          <div class="nav-bar__voice">voice</div>
+          <div class="nav-bar__notifications">notify</div>
+          <div class="nav-bar__profile">profile</div>
+        </nav>
+      </div>
+    </div>
+  </body>
+  <script src="/index.js"></script>
+</html>

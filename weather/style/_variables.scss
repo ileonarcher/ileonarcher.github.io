@@ -1,0 +1,17 @@
+@use 'helpers' as *;
+
+:root {
+    --light-text: #E6E9FF;
+    --dark-text: #B2A4FF;
+    --color-dark: #192163;
+    --color-light: #363E71;
+    --color-select: #5FACFF;
+
+
+    --font-family-base: 'Rajdhani', sans-serif;
+
+    --container-width: #{rem(393)};
+    --container-padding-x: #{rem(16)};
+
+    --transition-duration: 0.2s;
+}
